@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "516631954054",
+    "project_id": "students-notes-app",
+    "storage_bucket": "students-notes-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516631954054:android:c8e354a32e001bf1df0707",
+        "android_client_info": {
+          "package_name": "com.dev.studentsNotesApp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJbydLi7as9MuGG0v1CPPfBsyt1RMC8Ik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516631954054:android:2e25b1d6ffbd1f3cdf0707",
+        "android_client_info": {
+          "package_name": "com.faris.studentsAdminApp.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJbydLi7as9MuGG0v1CPPfBsyt1RMC8Ik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
