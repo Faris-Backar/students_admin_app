@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:student_app_admin/gen/fonts.gen.dart';
 // import 'package:students_notes_app/gen/fonts.gen.dart';
 
 class AppTheme {
@@ -17,7 +18,7 @@ class AppTheme {
       hintColor: mediumPurple,
       colorScheme: ColorScheme.fromSwatch(backgroundColor: palePink),
       // scaffoldBackgroundColor: palePink,
-      // fontFamily: FontFamily.poppins,
+      fontFamily: FontFamily.poppins,
       appBarTheme: const AppBarTheme(
           color: white, elevation: 0.0, foregroundColor: black),
       textTheme: const TextTheme(

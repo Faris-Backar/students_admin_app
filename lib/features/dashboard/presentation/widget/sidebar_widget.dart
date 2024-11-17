@@ -1,5 +1,9 @@
+// sidebar_widget.dart
+
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:student_app_admin/core/app_strings.dart';
+import 'package:student_app_admin/core/routes/app_router.dart';
 import 'package:student_app_admin/core/theme/app_theme.dart';
 
 class SidebarWidget extends StatefulWidget {
@@ -13,20 +17,39 @@ class SidebarWidget extends StatefulWidget {
   });
 
   @override
-  _SidebarState createState() => _SidebarState();
+  State<SidebarWidget> createState() => _SidebarState();
 }
 
-class _SidebarState extends State<SidebarWidget>
-    with SingleTickerProviderStateMixin {
+class _SidebarState extends State<SidebarWidget> {
   int selectedIndex = 0;
   int? hoveredIndex;
 
   final List<Map<String, dynamic>> options = [
-    {AppStrings.icon: Icons.home, AppStrings.title: "Home"},
-    {AppStrings.icon: Icons.school, AppStrings.title: "Students"},
-    {AppStrings.icon: Icons.campaign, AppStrings.title: "Campaigns"},
-    {AppStrings.icon: Icons.admin_panel_settings, AppStrings.title: "Admin"},
-    {AppStrings.icon: Icons.settings, AppStrings.title: "Settings"},
+    {
+      AppStrings.icon: Icons.home,
+      AppStrings.title: AppStrings.home,
+      AppStrings.route: PageResources.homeNested
+    },
+    {
+      AppStrings.icon: Icons.school,
+      AppStrings.title: AppStrings.students,
+      AppStrings.route: PageResources.students
+    },
+    {
+      AppStrings.icon: Icons.campaign,
+      AppStrings.title: AppStrings.campaings,
+      AppStrings.route: PageResources.campaign
+    },
+    // {
+    //   AppStrings.icon: Icons.settings,
+    //   AppStrings.title: AppStrings.admin,
+    //   AppStrings.route: PageResources.admin
+    // },
+    {
+      AppStrings.icon: Icons.settings,
+      AppStrings.title: AppStrings.settings,
+      AppStrings.route: PageResources.settings
+    },
   ];
 
   @override
@@ -51,6 +74,8 @@ class _SidebarState extends State<SidebarWidget>
                   setState(() {
                     selectedIndex = index;
                   });
+                  context.router.pushNamed(
+                      options[index][AppStrings.route]); // Navigate to route
                 },
                 child: Container(
                   width: double.infinity,

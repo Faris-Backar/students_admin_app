@@ -1,4 +1,4 @@
-import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:student_app_admin/core/app_core.dart';
 import 'package:student_app_admin/core/responsive.dart';
@@ -40,10 +40,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
           Expanded(
             flex: isDesktop ? 7 : 1,
             child: Column(
-              children: [
-                if (isDesktop) _buildAppBar(),
-                _buildMainContent(),
-              ],
+              children: [if (isDesktop) _buildAppBar(), const AutoRouter()],
             ),
           ),
         ],
@@ -66,7 +63,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               icon: const Icon(Icons.menu_rounded),
               onPressed: () => _scaffoldKey.currentState?.openDrawer(),
             ),
-      title: const Text(AppStrings.home),
+      title: const Text(AppStrings.dashboard),
       actions: [
         IconButton(
           onPressed: () {},
